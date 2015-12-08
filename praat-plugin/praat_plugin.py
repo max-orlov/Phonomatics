@@ -1,11 +1,19 @@
-from os import path, listdir
+from os import path, listdir, makedirs
 import subprocess
 
+PARAM_FILES_REL_PATH = 'demo/work_dir/param_files'
+PF_FILES_REL_PATH = 'demo/work_dir/pf_files'
+STATS_FILES = 'demo/work_dir/stats_files'
 
 class PraatPlugin(object):
 
-    def __init__(self, praat_path):
+    def __init__(self, praat_path, praat_prosody_path):
         self.praat_path = praat_path
+        dirs_to_create = [path.join(praat_prosody_path, working_dirs_path)
+                          for working_dirs_path in [PARAM_FILES_REL_PATH, PF_FILES_REL_PATH, STATS_FILES]]
+        for dir in dirs_to_create:
+            if not path.isdir(dir):
+                makedirs(dir)
 
     def execute_script(self, script, *args):
         """
