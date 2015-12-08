@@ -1,0 +1,182 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "vowel" 
+        xmin = 0 
+        xmax = 32 
+        intervals: size = 42 
+        intervals [1]:
+            xmin = 0 
+            xmax = 6.720000000000027 
+            text = "" 
+        intervals [2]:
+            xmin = 6.720000000000027 
+            xmax = 6.910000000000082 
+            text = "vowel" 
+        intervals [3]:
+            xmin = 6.910000000000082 
+            xmax = 7 
+            text = "" 
+        intervals [4]:
+            xmin = 7 
+            xmax = 7.029999999999973 
+            text = "vowel" 
+        intervals [5]:
+            xmin = 7.029999999999973 
+            xmax = 14.422350000000051 
+            text = "" 
+        intervals [6]:
+            xmin = 14.422350000000051 
+            xmax = 14.462350000000015 
+            text = "vowel" 
+        intervals [7]:
+            xmin = 14.462350000000015 
+            xmax = 14.562349999999924 
+            text = "" 
+        intervals [8]:
+            xmin = 14.562349999999924 
+            xmax = 14.642350000000079 
+            text = "vowel" 
+        intervals [9]:
+            xmin = 14.642350000000079 
+            xmax = 14.802349999999933 
+            text = "vowel" 
+        intervals [10]:
+            xmin = 14.802349999999933 
+            xmax = 15.470000000000027 
+            text = "" 
+        intervals [11]:
+            xmin = 15.470000000000027 
+            xmax = 15.539999999999964 
+            text = "vowel" 
+        intervals [12]:
+            xmin = 15.539999999999964 
+            xmax = 15.720000000000027 
+            text = "" 
+        intervals [13]:
+            xmin = 15.720000000000027 
+            xmax = 15.75 
+            text = "vowel" 
+        intervals [14]:
+            xmin = 15.75 
+            xmax = 16.21867999999995 
+            text = "" 
+        intervals [15]:
+            xmin = 16.21867999999995 
+            xmax = 16.268679999999904 
+            text = "vowel" 
+        intervals [16]:
+            xmin = 16.268679999999904 
+            xmax = 16.37868000000003 
+            text = "" 
+        intervals [17]:
+            xmin = 16.37868000000003 
+            xmax = 16.48867999999993 
+            text = "vowel" 
+        intervals [18]:
+            xmin = 16.48867999999993 
+            xmax = 16.548680000000104 
+            text = "" 
+        intervals [19]:
+            xmin = 16.548680000000104 
+            xmax = 16.678679999999986 
+            text = "vowel" 
+        intervals [20]:
+            xmin = 16.678679999999986 
+            xmax = 16.85868000000005 
+            text = "" 
+        intervals [21]:
+            xmin = 16.85868000000005 
+            xmax = 16.888680000000022 
+            text = "vowel" 
+        intervals [22]:
+            xmin = 16.888680000000022 
+            xmax = 17.048680000000104 
+            text = "" 
+        intervals [23]:
+            xmin = 17.048680000000104 
+            xmax = 17.09868000000006 
+            text = "vowel" 
+        intervals [24]:
+            xmin = 17.09868000000006 
+            xmax = 17.198679999999968 
+            text = "" 
+        intervals [25]:
+            xmin = 17.198679999999968 
+            xmax = 17.248679999999922 
+            text = "vowel" 
+        intervals [26]:
+            xmin = 17.248679999999922 
+            xmax = 17.308680000000095 
+            text = "" 
+        intervals [27]:
+            xmin = 17.308680000000095 
+            xmax = 17.388680000000022 
+            text = "vowel" 
+        intervals [28]:
+            xmin = 17.388680000000022 
+            xmax = 17.428679999999986 
+            text = "" 
+        intervals [29]:
+            xmin = 17.428679999999986 
+            xmax = 17.47867999999994 
+            text = "vowel" 
+        intervals [30]:
+            xmin = 17.47867999999994 
+            xmax = 17.538680000000113 
+            text = "" 
+        intervals [31]:
+            xmin = 17.538680000000113 
+            xmax = 17.60868000000005 
+            text = "vowel" 
+        intervals [32]:
+            xmin = 17.60868000000005 
+            xmax = 17.668679999999995 
+            text = "" 
+        intervals [33]:
+            xmin = 17.668679999999995 
+            xmax = 17.698679999999968 
+            text = "vowel" 
+        intervals [34]:
+            xmin = 17.698679999999968 
+            xmax = 17.768679999999904 
+            text = "" 
+        intervals [35]:
+            xmin = 17.768679999999904 
+            xmax = 18.008679999999913 
+            text = "vowel" 
+        intervals [36]:
+            xmin = 18.008679999999913 
+            xmax = 24.059999999999945 
+            text = "" 
+        intervals [37]:
+            xmin = 24.059999999999945 
+            xmax = 24.170000000000073 
+            text = "vowel" 
+        intervals [38]:
+            xmin = 24.170000000000073 
+            xmax = 24.279999999999973 
+            text = "" 
+        intervals [39]:
+            xmin = 24.279999999999973 
+            xmax = 24.470000000000027 
+            text = "vowel" 
+        intervals [40]:
+            xmin = 24.470000000000027 
+            xmax = 27.05000999999993 
+            text = "" 
+        intervals [41]:
+            xmin = 27.05000999999993 
+            xmax = 27.220010000000002 
+            text = "vowel" 
+        intervals [42]:
+            xmin = 27.220010000000002 
+            xmax = 32 
+            text = "" 

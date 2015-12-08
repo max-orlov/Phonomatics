@@ -1,0 +1,126 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "" 
+        xmin = 0 
+        xmax = 32 
+        intervals: size = 28 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.2599900000000162 
+            text = "" 
+        intervals [2]:
+            xmin = 1.2599900000000162 
+            xmax = 1.419990000000098 
+            text = "SO" 
+        intervals [3]:
+            xmin = 1.419990000000098 
+            xmax = 1.619989999999916 
+            text = "THAT'D" 
+        intervals [4]:
+            xmin = 1.619989999999916 
+            xmax = 1.7199900000000525 
+            text = "BE" 
+        intervals [5]:
+            xmin = 1.7199900000000525 
+            xmax = 2.149989999999889 
+            text = "THREE" 
+        intervals [6]:
+            xmin = 2.149989999999889 
+            xmax = 2.369989999999916 
+            text = "IF" 
+        intervals [7]:
+            xmin = 2.369989999999916 
+            xmax = 2.649989999999889 
+            text = "WE" 
+        intervals [8]:
+            xmin = 2.649989999999889 
+            xmax = 2.68999000000008 
+            text = "" 
+        intervals [9]:
+            xmin = 2.68999000000008 
+            xmax = 2.889989999999898 
+            text = "TOOK" 
+        intervals [10]:
+            xmin = 2.889989999999898 
+            xmax = 3.0499899999999798 
+            text = "THAT" 
+        intervals [11]:
+            xmin = 3.0499899999999798 
+            xmax = 3.2099900000000616 
+            text = "AS" 
+        intervals [12]:
+            xmin = 3.2099900000000616 
+            xmax = 3.289989999999989 
+            text = "THE" 
+        intervals [13]:
+            xmin = 3.289989999999989 
+            xmax = 3.8299899999999525 
+            text = "CRITERIA" 
+        intervals [14]:
+            xmin = 3.8299899999999525 
+            xmax = 4.379349999999931 
+            text = "" 
+        intervals [15]:
+            xmin = 4.379349999999931 
+            xmax = 4.679350000000113 
+            text = "UH" 
+        intervals [16]:
+            xmin = 4.679350000000113 
+            xmax = 5.899989999999889 
+            text = "" 
+        intervals [17]:
+            xmin = 5.899989999999889 
+            xmax = 6.039989999999989 
+            text = "RIGHT" 
+        intervals [18]:
+            xmin = 6.039989999999989 
+            xmax = 6.169990000000098 
+            text = "OFF" 
+        intervals [19]:
+            xmin = 6.169990000000098 
+            xmax = 6.249990000000025 
+            text = "THE" 
+        intervals [20]:
+            xmin = 6.249990000000025 
+            xmax = 6.489990000000034 
+            text = "BAT" 
+        intervals [21]:
+            xmin = 6.489990000000034 
+            xmax = 15.410000000000082 
+            text = "" 
+        intervals [22]:
+            xmin = 15.410000000000082 
+            xmax = 15.5 
+            text = "YOU" 
+        intervals [23]:
+            xmin = 15.5 
+            xmax = 15.529999999999973 
+            text = "" 
+        intervals [24]:
+            xmin = 15.529999999999973 
+            xmax = 15.660000000000082 
+            text = "WANT" 
+        intervals [25]:
+            xmin = 15.660000000000082 
+            xmax = 15.720000000000027 
+            text = "TO" 
+        intervals [26]:
+            xmin = 15.720000000000027 
+            xmax = 15.819999999999936 
+            text = "GO" 
+        intervals [27]:
+            xmin = 15.819999999999936 
+            xmax = 15.980000000000018 
+            text = "AHEAD" 
+        intervals [28]:
+            xmin = 15.980000000000018 
+            xmax = 32 
+            text = "" 

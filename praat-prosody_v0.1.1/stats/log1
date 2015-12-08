@@ -1,0 +1,94 @@
+init_toolkit
+
+Summary of the System Working Mode
+
+Your inputs
+wav_info_list: ../../AFIT-031805-wavinfo.txt
+
+You choose to
+use existing param files
+keep param files
+
+The Toolkit will store outputs in
+parameter_files_directory: ../../work_dir/param_files
+statistic_files_direcotry: ../../work_dir/stats_files
+
+starting the first pass of calculating statistics
+
+start processing ../../data/AFIT-031805_C.wav
+init_spkr
+pre_process_first_pass_spkr
+compute_first_pass_spkr_stats
+post_first_pass_spkr
+finish processing ../../data/AFIT-031805_C.wav
+
+start processing ../../data/AFIT-031805_D.wav
+init_spkr
+pre_process_first_pass_spkr
+compute_first_pass_spkr_stats
+post_first_pass_spkr
+finish processing ../../data/AFIT-031805_D.wav
+
+start processing ../../data/AFIT-031805_E.wav
+init_spkr
+pre_process_first_pass_spkr
+compute_first_pass_spkr_stats
+post_first_pass_spkr
+finish processing ../../data/AFIT-031805_E.wav
+
+start processing ../../data/AFIT-031805_F.wav
+init_spkr
+pre_process_first_pass_spkr
+compute_first_pass_spkr_stats
+post_first_pass_spkr
+finish processing ../../data/AFIT-031805_F.wav
+
+start processing ../../data/AFIT-031805_G.wav
+init_spkr
+pre_process_first_pass_spkr
+compute_first_pass_spkr_stats
+post_first_pass_spkr
+finish processing ../../data/AFIT-031805_G.wav
+
+finish the first pass of calculating statistics
+
+starting the second pass of calculating statistics
+
+start processing ../../data/AFIT-031805_C.wav
+init_spkr
+pre_process_second_pass_spkr
+compute_second_pass_spkr_stats
+post_second_pass_spkr
+finish processing ../../data/AFIT-031805_C.wav
+
+start processing ../../data/AFIT-031805_D.wav
+init_spkr
+pre_process_second_pass_spkr
+compute_second_pass_spkr_stats
+post_second_pass_spkr
+finish processing ../../data/AFIT-031805_D.wav
+
+start processing ../../data/AFIT-031805_E.wav
+init_spkr
+pre_process_second_pass_spkr
+compute_second_pass_spkr_stats
+post_second_pass_spkr
+finish processing ../../data/AFIT-031805_E.wav
+
+start processing ../../data/AFIT-031805_F.wav
+init_spkr
+pre_process_second_pass_spkr
+compute_second_pass_spkr_stats
+post_second_pass_spkr
+finish processing ../../data/AFIT-031805_F.wav
+
+start processing ../../data/AFIT-031805_G.wav
+init_spkr
+pre_process_second_pass_spkr
+compute_second_pass_spkr_stats
+post_second_pass_spkr
+finish processing ../../data/AFIT-031805_G.wav
+
+finish the second pass of calculating statistics
+
+post_toolkit

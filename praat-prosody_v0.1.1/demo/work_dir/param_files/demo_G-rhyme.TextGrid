@@ -1,0 +1,174 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "rhyme" 
+        xmin = 0 
+        xmax = 32 
+        intervals: size = 40 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.379989999999907 
+            text = "" 
+        intervals [2]:
+            xmin = 1.379989999999907 
+            xmax = 1.419990000000098 
+            text = "rhyme" 
+        intervals [3]:
+            xmin = 1.419990000000098 
+            xmax = 1.5599899999999707 
+            text = "" 
+        intervals [4]:
+            xmin = 1.5599899999999707 
+            xmax = 1.619989999999916 
+            text = "rhyme" 
+        intervals [5]:
+            xmin = 1.619989999999916 
+            xmax = 1.659990000000107 
+            text = "" 
+        intervals [6]:
+            xmin = 1.659990000000107 
+            xmax = 1.7199900000000525 
+            text = "rhyme" 
+        intervals [7]:
+            xmin = 1.7199900000000525 
+            xmax = 1.919990000000098 
+            text = "" 
+        intervals [8]:
+            xmin = 1.919990000000098 
+            xmax = 2.149989999999889 
+            text = "rhyme" 
+        intervals [9]:
+            xmin = 2.149989999999889 
+            xmax = 2.369989999999916 
+            text = "rhyme" 
+        intervals [10]:
+            xmin = 2.369989999999916 
+            xmax = 2.399989999999889 
+            text = "" 
+        intervals [11]:
+            xmin = 2.399989999999889 
+            xmax = 2.649989999999889 
+            text = "rhyme" 
+        intervals [12]:
+            xmin = 2.649989999999889 
+            xmax = 2.769990000000007 
+            text = "" 
+        intervals [13]:
+            xmin = 2.769990000000007 
+            xmax = 2.889989999999898 
+            text = "rhyme" 
+        intervals [14]:
+            xmin = 2.889989999999898 
+            xmax = 2.9499900000000707 
+            text = "" 
+        intervals [15]:
+            xmin = 2.9499900000000707 
+            xmax = 3.0499899999999798 
+            text = "rhyme" 
+        intervals [16]:
+            xmin = 3.0499899999999798 
+            xmax = 3.2099900000000616 
+            text = "rhyme" 
+        intervals [17]:
+            xmin = 3.2099900000000616 
+            xmax = 3.2399900000000343 
+            text = "" 
+        intervals [18]:
+            xmin = 3.2399900000000343 
+            xmax = 3.289989999999989 
+            text = "rhyme" 
+        intervals [19]:
+            xmin = 3.289989999999989 
+            xmax = 3.7299900000000434 
+            text = "" 
+        intervals [20]:
+            xmin = 3.7299900000000434 
+            xmax = 3.8299899999999525 
+            text = "rhyme" 
+        intervals [21]:
+            xmin = 3.8299899999999525 
+            xmax = 4.379349999999931 
+            text = "" 
+        intervals [22]:
+            xmin = 4.379349999999931 
+            xmax = 4.679350000000113 
+            text = "rhyme" 
+        intervals [23]:
+            xmin = 4.679350000000113 
+            xmax = 5.979990000000043 
+            text = "" 
+        intervals [24]:
+            xmin = 5.979990000000043 
+            xmax = 6.039989999999989 
+            text = "rhyme" 
+        intervals [25]:
+            xmin = 6.039989999999989 
+            xmax = 6.169990000000098 
+            text = "rhyme" 
+        intervals [26]:
+            xmin = 6.169990000000098 
+            xmax = 6.199990000000071 
+            text = "" 
+        intervals [27]:
+            xmin = 6.199990000000071 
+            xmax = 6.249990000000025 
+            text = "rhyme" 
+        intervals [28]:
+            xmin = 6.249990000000025 
+            xmax = 6.309989999999971 
+            text = "" 
+        intervals [29]:
+            xmin = 6.309989999999971 
+            xmax = 6.489990000000034 
+            text = "rhyme" 
+        intervals [30]:
+            xmin = 6.489990000000034 
+            xmax = 15.470000000000027 
+            text = "" 
+        intervals [31]:
+            xmin = 15.470000000000027 
+            xmax = 15.5 
+            text = "rhyme" 
+        intervals [32]:
+            xmin = 15.5 
+            xmax = 15.559999999999945 
+            text = "" 
+        intervals [33]:
+            xmin = 15.559999999999945 
+            xmax = 15.660000000000082 
+            text = "rhyme" 
+        intervals [34]:
+            xmin = 15.660000000000082 
+            xmax = 15.690000000000055 
+            text = "" 
+        intervals [35]:
+            xmin = 15.690000000000055 
+            xmax = 15.720000000000027 
+            text = "rhyme" 
+        intervals [36]:
+            xmin = 15.720000000000027 
+            xmax = 15.75 
+            text = "" 
+        intervals [37]:
+            xmin = 15.75 
+            xmax = 15.819999999999936 
+            text = "rhyme" 
+        intervals [38]:
+            xmin = 15.819999999999936 
+            xmax = 15.920000000000073 
+            text = "" 
+        intervals [39]:
+            xmin = 15.920000000000073 
+            xmax = 15.980000000000018 
+            text = "rhyme" 
+        intervals [40]:
+            xmin = 15.980000000000018 
+            xmax = 32 
+            text = "" 
