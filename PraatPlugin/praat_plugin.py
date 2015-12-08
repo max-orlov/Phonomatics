@@ -5,6 +5,7 @@ PARAM_FILES_REL_PATH = 'demo/work_dir/param_files'
 PF_FILES_REL_PATH = 'demo/work_dir/pf_files'
 STATS_FILES = 'demo/work_dir/stats_files'
 
+
 class PraatPlugin(object):
 
     def __init__(self, praat_path, praat_prosody_path):

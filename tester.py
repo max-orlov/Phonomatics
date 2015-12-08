@@ -1,6 +1,7 @@
-from os import path
 import json
-from praat_plugin import PraatPlugin
+from os import path
+
+from PraatPlugin import PraatPlugin
 
 PRAAT_EXE = path.abspath(path.normpath('..\Praat.exe'))
 PRAAT_PROSODY_PATH = path.abspath(path.normpath('..\praat-prosody_v0.1.1'))
