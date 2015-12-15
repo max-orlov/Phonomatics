@@ -52,4 +52,3 @@ def _create_word_file(file_path, xmax, resolution):
         for num, interval in enumerate([i * resolution for i in range(intervals)], 1):
             f.write(interval_conf.format(num, interval, min(interval + resolution, xmax), num))
 
-aaa
