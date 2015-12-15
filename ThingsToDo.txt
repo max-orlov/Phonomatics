@@ -1,0 +1,12 @@
+We need to remove every data with the following IDs from the output:
+
+1. WORD
+2. VOWEL
+3. RHYME
+4. PHONE
+
+We need to create:
+1. script that creates a TextGrid file for 0.5 seconds of the input audio.
+   1.1. each "word" should be a running index.
+   1.2. xmin and xmax should be in 0.5 second resolution.
+2. make sure that the phoneme file contains only 1 record ("") and the size is 1.
