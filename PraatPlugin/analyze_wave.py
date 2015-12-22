@@ -58,7 +58,7 @@ class VoiceAnalyzer(object):
         elif os.path.isfile(waves):
             analyzed_files = [self._analyze_wave_file(waves)]
         else:
-            raise Exception("This isn't a dir")
+            raise Exception("This isn't a dir nor a file")
 
         self._create_wav_info_list(analyzed_files)
 
