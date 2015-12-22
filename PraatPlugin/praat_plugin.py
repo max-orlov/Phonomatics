@@ -7,6 +7,7 @@ STATS_FILES = 'demo/work_dir/stats_files'
 
 NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD']
 
+
 class PraatPlugin(object):
 
     def __init__(self, praat_path, praat_prosody_path):
@@ -32,7 +33,7 @@ class PraatPlugin(object):
         return out
 
     @staticmethod
-    def process_output(work_dir, clean_word_and_phones=False):
+    def process_output(work_dir, clean_word_and_phones=False, non_required_keys=None):
         d = {}
         attributes = None
         for output_file in listdir(work_dir):
@@ -46,7 +47,7 @@ class PraatPlugin(object):
                         d[output_file][values[0]] = \
                             {attributes[i]: values[i] for i in range(1, len(values))
                              if not clean_word_and_phones or
-                             not any(filter(lambda att: att in attributes[i], NON_REQUIRED_KEYS))}
+                             not any(filter(lambda att: att in attributes[i], non_required_keys or NON_REQUIRED_KEYS))}
             attributes = None
 
         return d

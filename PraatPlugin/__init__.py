@@ -1,2 +1,1 @@
-
-from praat_plugin import PraatPlugin
+from analyze_wave import VoiceAnalyzer
