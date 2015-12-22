@@ -1,0 +1,218 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "" 
+        xmin = 0 
+        xmax = 32 
+        intervals: size = 51 
+        intervals [1]:
+            xmin = 0 
+            xmax = 7.44408999999996 
+            text = "" 
+        intervals [2]:
+            xmin = 7.44408999999996 
+            xmax = 7.614090000000033 
+            text = "YEAH" 
+        intervals [3]:
+            xmin = 7.614090000000033 
+            xmax = 7.754089999999906 
+            text = "DO" 
+        intervals [4]:
+            xmin = 7.754089999999906 
+            xmax = 7.914089999999987 
+            text = "WE" 
+        intervals [5]:
+            xmin = 7.914089999999987 
+            xmax = 8.710010000000011 
+            text = "" 
+        intervals [6]:
+            xmin = 8.710010000000011 
+            xmax = 8.95001000000002 
+            text = "WANT" 
+        intervals [7]:
+            xmin = 8.95001000000002 
+            xmax = 8.980009999999993 
+            text = "" 
+        intervals [8]:
+            xmin = 8.980009999999993 
+            xmax = 9.05000999999993 
+            text = "TO" 
+        intervals [9]:
+            xmin = 9.05000999999993 
+            xmax = 9.160010000000057 
+            text = "PUT" 
+        intervals [10]:
+            xmin = 9.160010000000057 
+            xmax = 9.250009999999975 
+            text = "THIS" 
+        intervals [11]:
+            xmin = 9.250009999999975 
+            xmax = 9.430010000000038 
+            text = "UP" 
+        intervals [12]:
+            xmin = 9.430010000000038 
+            xmax = 9.500009999999975 
+            text = "ON" 
+        intervals [13]:
+            xmin = 9.500009999999975 
+            xmax = 9.56000999999992 
+            text = "THE" 
+        intervals [14]:
+            xmin = 9.56000999999992 
+            xmax = 9.94001000000003 
+            text = "BOARD" 
+        intervals [15]:
+            xmin = 9.94001000000003 
+            xmax = 10.160010000000057 
+            text = "AND" 
+        intervals [16]:
+            xmin = 10.160010000000057 
+            xmax = 11.730000000000018 
+            text = "" 
+        intervals [17]:
+            xmin = 11.730000000000018 
+            xmax = 11.960000000000036 
+            text = "WRITE" 
+        intervals [18]:
+            xmin = 11.960000000000036 
+            xmax = 12.069999999999936 
+            text = "THEM" 
+        intervals [19]:
+            xmin = 12.069999999999936 
+            xmax = 12.150000000000091 
+            text = "ON" 
+        intervals [20]:
+            xmin = 12.150000000000091 
+            xmax = 12.220000000000027 
+            text = "THE" 
+        intervals [21]:
+            xmin = 12.220000000000027 
+            xmax = 12.5 
+            text = "BOARD" 
+        intervals [22]:
+            xmin = 12.5 
+            xmax = 12.670000000000073 
+            text = "AND" 
+        intervals [23]:
+            xmin = 12.670000000000073 
+            xmax = 14.570009999999911 
+            text = "" 
+        intervals [24]:
+            xmin = 14.570009999999911 
+            xmax = 14.660010000000057 
+            text = "I" 
+        intervals [25]:
+            xmin = 14.660010000000057 
+            xmax = 14.990009999999984 
+            text = "CAN" 
+        intervals [26]:
+            xmin = 14.990009999999984 
+            xmax = 15.519999999999982 
+            text = "" 
+        intervals [27]:
+            xmin = 15.519999999999982 
+            xmax = 15.829999999999927 
+            text = "I" 
+        intervals [28]:
+            xmin = 15.829999999999927 
+            xmax = 15.990000000000009 
+            text = "CAN" 
+        intervals [29]:
+            xmin = 15.990000000000009 
+            xmax = 16.069999999999936 
+            text = "" 
+        intervals [30]:
+            xmin = 16.069999999999936 
+            xmax = 16.339999999999918 
+            text = "OKAY" 
+        intervals [31]:
+            xmin = 16.339999999999918 
+            xmax = 18.21001000000001 
+            text = "" 
+        intervals [32]:
+            xmin = 18.21001000000001 
+            xmax = 18.54000999999994 
+            text = "OKAY" 
+        intervals [33]:
+            xmin = 18.54000999999994 
+            xmax = 22 
+            text = "" 
+        intervals [34]:
+            xmin = 22 
+            xmax = 22.160000000000082 
+            text = "WANT" 
+        intervals [35]:
+            xmin = 22.160000000000082 
+            xmax = 22.220000000000027 
+            text = "TO" 
+        intervals [36]:
+            xmin = 22.220000000000027 
+            xmax = 22.309999999999945 
+            text = "PUT" 
+        intervals [37]:
+            xmin = 22.309999999999945 
+            xmax = 22.38000000000011 
+            text = "THE" 
+        intervals [38]:
+            xmin = 22.38000000000011 
+            xmax = 22.720000000000027 
+            text = "LAST" 
+        intervals [39]:
+            xmin = 22.720000000000027 
+            xmax = 23.069999999999936 
+            text = "NAMES" 
+        intervals [40]:
+            xmin = 23.069999999999936 
+            xmax = 23.269999999999982 
+            text = "JUST" 
+        intervals [41]:
+            xmin = 23.269999999999982 
+            xmax = 23.329999999999927 
+            text = "ON" 
+        intervals [42]:
+            xmin = 23.329999999999927 
+            xmax = 23.5 
+            text = "THE" 
+        intervals [43]:
+            xmin = 23.5 
+            xmax = 25.25 
+            text = "" 
+        intervals [44]:
+            xmin = 25.25 
+            xmax = 25.410000000000082 
+            text = "OKAY" 
+        intervals [45]:
+            xmin = 25.410000000000082 
+            xmax = 25.63000000000011 
+            text = "THERE'S" 
+        intervals [46]:
+            xmin = 25.63000000000011 
+            xmax = 26.210000000000036 
+            text = "DANCE" 
+        intervals [47]:
+            xmin = 26.210000000000036 
+            xmax = 27.829999999999927 
+            text = "" 
+        intervals [48]:
+            xmin = 27.829999999999927 
+            xmax = 28.089999999999918 
+            text = "YEAH" 
+        intervals [49]:
+            xmin = 28.089999999999918 
+            xmax = 30.178249999999935 
+            text = "" 
+        intervals [50]:
+            xmin = 30.178249999999935 
+            xmax = 30.36824999999999 
+            text = "HE" 
+        intervals [51]:
+            xmin = 30.36824999999999 
+            xmax = 32 
+            text = "" 

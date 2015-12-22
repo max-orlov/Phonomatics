@@ -1,0 +1,90 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 32 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "slope(HZ/s)" 
+        xmin = 0 
+        xmax = 32 
+        intervals: size = 19 
+        intervals [1]:
+            xmin = 0 
+            xmax = 9.66 
+            text = "" 
+        intervals [2]:
+            xmin = 9.66 
+            xmax = 9.72 
+            text = "-212.34540865543906" 
+        intervals [3]:
+            xmin = 9.72 
+            xmax = 9.9 
+            text = "" 
+        intervals [4]:
+            xmin = 9.9 
+            xmax = 9.95 
+            text = "-61.67623734233434" 
+        intervals [5]:
+            xmin = 9.95 
+            xmax = 15.08 
+            text = "" 
+        intervals [6]:
+            xmin = 15.08 
+            xmax = 15.1 
+            text = "-421.3447151289562" 
+        intervals [7]:
+            xmin = 15.1 
+            xmax = 15.17 
+            text = "" 
+        intervals [8]:
+            xmin = 15.17 
+            xmax = 15.24 
+            text = "-348.34211734547563" 
+        intervals [9]:
+            xmin = 15.24 
+            xmax = 16.35 
+            text = "" 
+        intervals [10]:
+            xmin = 16.35 
+            xmax = 16.61 
+            text = "-51.75331423098366" 
+        intervals [11]:
+            xmin = 16.61 
+            xmax = 23.16 
+            text = "" 
+        intervals [12]:
+            xmin = 23.16 
+            xmax = 23.37 
+            text = "-110.39939393316536" 
+        intervals [13]:
+            xmin = 23.37 
+            xmax = 24.17 
+            text = "" 
+        intervals [14]:
+            xmin = 24.17 
+            xmax = 24.19 
+            text = "-126.48693422596423" 
+        intervals [15]:
+            xmin = 24.19 
+            xmax = 24.36 
+            text = "" 
+        intervals [16]:
+            xmin = 24.36 
+            xmax = 24.57 
+            text = "-1.8970734527109108" 
+        intervals [17]:
+            xmin = 24.57 
+            xmax = 24.71 
+            text = "" 
+        intervals [18]:
+            xmin = 24.71 
+            xmax = 24.9 
+            text = "3.381364651478058" 
+        intervals [19]:
+            xmin = 24.9 
+            xmax = 32 
+            text = "" 

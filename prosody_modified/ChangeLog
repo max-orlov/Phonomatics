@@ -1,0 +1,9 @@
+v0.1.1
+	1. Add code in code/fetch. (fetch_f0_feature and fetch_energy_feature) to
+	deal with the last word.
+	2. Change pf_PHONES_IN_LAST_RHYME to vf_PHONES_IN_LAST_RHYME in
+	code/derive.praat (derive_normalized_rhyme).
+	3. Initialize values of the new rows appended to
+	spkr_feature_table to zero. (new Praat versions requires
+	initialization of table values prior to access table values.)
+
