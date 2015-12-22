@@ -1,6 +1,2 @@
 SESSION	SPEAKER	GENDER	WAVEFORM
-demo_C	C	female	../demo/data/demo_C.wav
-demo_D	D	male	../demo/data/demo_D.wav
-demo_E	E	male	../demo/data/demo_E.wav
-demo_F	F	male	../demo/data/demo_F.wav
-demo_G	G	male	../demo/data/demo_G.wav
+sample.wav	A	male	C:\Users\Maxim\PycharmProjects\VoiceLearning\praat-prosody_v0.1.1\demo\samples\sample.wav

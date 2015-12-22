@@ -1,10 +1,9 @@
 from os import path
-
+from json import dumps
 from PraatPlugin.analyze_wave import VoiceAnalyzer
 
 v = VoiceAnalyzer()
-l = v.analyze_wave_file(path.abspath('voice_samples\sample2.wav'), 'C:\Users\Maxim\PycharmProjects\VoiceLearning')
+l = v.analyze(path.abspath('praat-prosody_v0.1.1\demo\samples\sample.wav'))
 
-print l
-
+print dumps(l, indent=2)
 
