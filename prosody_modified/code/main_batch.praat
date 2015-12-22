@@ -5,7 +5,7 @@
 #----------------------------------------
 include operations.praat
 
-form Variables
+form Varuables
 	sentence wav_info_table
 	text user_pf_name_table
 	text stats_dir
