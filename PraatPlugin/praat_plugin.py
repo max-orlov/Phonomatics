@@ -24,10 +24,10 @@ class PraatPlugin(object):
         :param args: any args needed by the script.
         :return:
         """
-        cmd = [self.praat_path, '--run', script]
+        cmd = ['Praat.exe', '--run', script]
         cmd.extend([str(i) for i in args])
         cmd = ' '.join(cmd)
-        out = subprocess.check_output(cmd, shell=True)
+        out = subprocess.check_output(cmd, env={'PATH': path.dirname(self.praat_path)})
         return out
 
     @staticmethod
