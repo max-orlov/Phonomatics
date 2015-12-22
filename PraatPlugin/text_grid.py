@@ -28,12 +28,12 @@ interval_conf = """
 """
 
 
-def create_textgrid_files(dest_dir, xmax, resolution=0.5):
+def create_textgrid_files(dest_dir, xmax, file_name, resolution=0.5):
     if not os.path.isdir(dest_dir):
         os.makedirs(dest_dir)
 
-    phone_file_path = os.path.join(dest_dir, PHONE_FILE_NAME)
-    word_file_path = os.path.join(dest_dir, WORD_FILE_NAME)
+    phone_file_path = os.path.join(dest_dir, '{0}-{1}'.format(file_name, PHONE_FILE_NAME))
+    word_file_path = os.path.join(dest_dir, '{0}-{1}'.format(file_name, WORD_FILE_NAME))
 
     _create_phone_file(phone_file_path, xmax)
     _create_word_file(word_file_path, xmax, float(resolution))

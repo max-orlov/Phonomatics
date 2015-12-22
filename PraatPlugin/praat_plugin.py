@@ -5,6 +5,8 @@ PARAM_FILES_REL_PATH = 'demo/work_dir/param_files'
 PF_FILES_REL_PATH = 'demo/work_dir/pf_files'
 STATS_FILES = 'demo/work_dir/stats_files'
 
+NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD']
+
 
 class PraatPlugin(object):
 
@@ -24,24 +26,28 @@ class PraatPlugin(object):
         :param args: any args needed by the script.
         :return:
         """
-        cmd = [self.praat_path, '--run', script]
+        cmd = ['Praat.exe', '--run', script]
         cmd.extend([str(i) for i in args])
         cmd = ' '.join(cmd)
-        out = subprocess.check_output(cmd, shell=True)
+        out = subprocess.check_output(cmd, env={'PATH': path.dirname(self.praat_path)})
         return out
 
     @staticmethod
-    def process_output(work_dir):
-        lst = {}
+    def process_output(work_dir, clean_word_and_phones=False, non_required_keys=None):
+        d = {}
         attributes = None
         for output_file in listdir(work_dir):
             with open(path.join(work_dir, output_file)) as f:
-                lst[output_file] = {}
+                d[output_file] = {}
                 for line in f:
                     values = line.split('\t')
                     if not attributes:
                         attributes = values
                     else:
-                        lst[output_file][values[0]] = {attributes[i]: values[i] for i in range(1, len(values))}
+                        d[output_file][values[0]] = \
+                            {attributes[i]: values[i] for i in range(1, len(values))
+                             if not clean_word_and_phones or
+                             not any(filter(lambda att: att in attributes[i], non_required_keys or NON_REQUIRED_KEYS))}
             attributes = None
-        return lst
+
+        return d
