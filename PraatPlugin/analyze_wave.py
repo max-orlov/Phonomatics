@@ -95,7 +95,6 @@ class VoiceAnalyzer(object):
                 f.write('{0}{1}'.format('\t'.join([os.path.basename(analyzed_file), 'A', 'male', analyzed_file]),
                                         os.linesep))
 
-
     @staticmethod
     def _get_wave_length(wave_file):
         with contextlib.closing(wave.open(wave_file)) as f:
