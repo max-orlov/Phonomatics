@@ -1,14 +1,5 @@
-from threading import _MainThread
-from unicodedata import name
-from cloudify_rest_client import client
-from sqlalchemy.dialects.mysql import mysqldb
-
 __author__ = 'maayan'
 
-#imports
-import sqlalchemy
-import pymysql
-import json
 import csv
 import datetime
 from sqlalchemy import create_engine
@@ -20,15 +11,13 @@ from pprint import pprint
 
 Base = declarative_base()
 class Label(Base):
-
     __tablename__ = 'labels'
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
-    label_id = Column(Integer)
+    episode_id = Column(Integer)
     start_time = Column(Time)
     end_time  = Column(Time)
-    label_id = Column(Integer)
-    play_id = Column(Integer)
-    actor_id = Column(Integer)
+    speaker_id = Column(Integer)
+    listener_id = Column(Integer)
     created_at = Column(DateTime)
     created_by = Column(String)
     comments = Column(String)
@@ -38,9 +27,9 @@ class Label(Base):
       for label in session.query(Label).all():
          pprint (vars(label))
     @staticmethod
-    def add(start_time,end_time,label_id,play_id,actor_id,created_by,comments):
-        l=Label(start_time=start_time,end_time=end_time,label_id=label_id,play_id=play_id,actor_id=actor_id,
-        created_by=created_by,comments=comments,created_at=datetime.datetime.now())
+    def add(episode_id,start_time,end_time,speaker_id,listener_id,created_by,comments):
+        l=Label(episode_id=episode_id,start_time=start_time,end_time=end_time,speaker_id=speaker_id,
+        listener_id=listener_id,created_by=created_by,comments=comments,created_at=datetime.datetime.now())
         session.add(l)
         session.commit()
 
@@ -49,7 +38,7 @@ class Label(Base):
         with open(csv_path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                Label.add(row['start_time'],row['end_time'],row['label_id'],row['play_id'],row['actor_id'],row['created_by'],row['comments'])
+                Label.add(row['episode_id'],row['start_time'],row['end_time'],row['speaker_id'],row['listener_id'], row['created_by'],row['comments'])
 
 
 if __name__ == "__main__":
