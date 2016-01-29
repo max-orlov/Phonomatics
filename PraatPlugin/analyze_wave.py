@@ -46,13 +46,17 @@ class VoiceAnalyzer(object):
     def _output_files(self):
         return '{0}\demo\work_dir\pf_files'.format(self._praat_prosody)
 
-    def analyze(self, waves):
+    def full_file_process(self, waves):
         """
         Analyzes wav file or a directory with wav files. each wav file would receive a text grid file, which
         would be used by praat to analyze the audio.
         :param waves: a dir with wavs or a single wav file path.
         :return: A dictionary based on the attributes derived by praat per file.
         """
+        self.praat_file_process(waves)
+        return self.process_output()
+
+    def praat_file_process(self, waves):
         if os.path.isdir(waves):
             analyzed_files = self._analyze_wave_files(waves)
         elif os.path.isfile(waves):
@@ -65,6 +69,11 @@ class VoiceAnalyzer(object):
         self._praat.execute_script(self._stats_script, *self._stat_args)
         self._praat.execute_script(self._main_script, *self._main_args)
 
+    def process_output(self):
+        """
+        Used in case where the sample files already ran once, and you only need to parse the praat output files.
+        :return: a dict representing the praat output.
+        """
         return self._praat.process_output(self._output_files, clean_word_and_phones=True)
 
     def _analyze_wave_files(self, wave_dir):
@@ -72,7 +81,6 @@ class VoiceAnalyzer(object):
         if os.path.isdir(wave_dir):
             for wave_file in filter(lambda f: f.endswith('.wav'), os.listdir(wave_dir)):
                 wav_full_path = os.path.join(wave_dir, wave_file)
-                self._analyze_wave_file(wav_full_path)
                 analyzed_files.append(self._analyze_wave_file(wav_full_path))
         return analyzed_files
 

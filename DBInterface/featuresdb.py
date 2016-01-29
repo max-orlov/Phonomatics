@@ -1,5 +1,3 @@
-__author__ = 'maayan'
-
 import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -8,16 +6,16 @@ from sqlalchemy import Sequence
 from sqlalchemy import Column, Integer, String, Time
 from pprint import pprint
 
+__author__ = 'maayan'
+
 Base = declarative_base()
 
 
 class Feature(Base):
 
     __tablename__ = 'features'
-    for i in range(0,2):
-        print i
     id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
-    play_id = Column(Integer)
+    episode_id = Column(Integer)
     start_time = Column(Time)
     end_time = Column(Time)
     created_at = Column(Time)
@@ -205,12 +203,12 @@ class Feature(Base):
             pprint(vars(feature))
 
     @staticmethod
-    def add(start_time, end_time, play_id, feature_id, **kwargs):
+    def add(start_time, end_time, episode_id, feature_id, **kwargs):
         engine = create_engine('mysql+pymysql://root:admin@127.0.0.1:3306/VOICE', echo=True)
         Session = sessionmaker(bind=engine)
         Session.configure(bind=engine)
         session = Session()
-        f = Feature(start_time=start_time, end_time=end_time, play_id=play_id, feature_id=feature_id,
+        f = Feature(start_time=start_time, end_time=end_time, episode_id=episode_id, feature_id=feature_id,
                     created_at=datetime.datetime.now(), **kwargs)
         session.add(f)
         session.commit()

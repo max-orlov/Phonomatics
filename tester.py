@@ -1,10 +1,10 @@
-import json
-from os import path, environ
 from PraatPlugin import VoiceAnalyzer
+from DBInterface import insert_episode
+
+output_file = 'res.json'
 
 v = VoiceAnalyzer()
-l = v.analyze(path.abspath(environ['SAMPLES_PATH']))
+l = v.process_output()
 
-with open('res.json', 'wb+') as f:
-    f.write(json.dumps(l, indent=2))
+insert_episode(l)
 
