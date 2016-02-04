@@ -5,7 +5,7 @@ PARAM_FILES_REL_PATH = 'demo/work_dir/param_files'
 PF_FILES_REL_PATH = 'demo/work_dir/pf_files'
 STATS_FILES = 'demo/work_dir/stats_files'
 
-NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD']
+NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD', 'SLOPE']
 
 
 class PraatPlugin(object):
@@ -45,7 +45,7 @@ class PraatPlugin(object):
                         attributes = values
                     else:
                         d[output_file][values[0]] = \
-                            {attributes[i]: values[i] for i in range(1, len(values))
+                            {attributes[i].replace('$', ''): values[i] for i in range(1, len(values))
                              if not clean_word_and_phones or
                              not any(filter(lambda att: att in attributes[i], non_required_keys or NON_REQUIRED_KEYS))}
             attributes = None
