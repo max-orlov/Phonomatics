@@ -4,7 +4,7 @@ from featuresdb import Feature
 import datetime
 
 
-def insert_episode(data):
+def insert_episodes(data):
     if isinstance(data, basestring) and os.path.isfile(data):
         with open(data) as data_file:
             data = yaml.load(data_file)

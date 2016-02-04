@@ -1,10 +1,11 @@
-from PraatPlugin import VoiceAnalyzer
-from DBInterface import insert_episode
+import os
 
-output_file = 'res.json'
+from PraatPlugin import VoiceAnalyzer
+from DBInterface import insert_episodes
 
 v = VoiceAnalyzer()
-l = v.process_output()
+l = v.full_file_process(os.environ['SAMPLES_PATH'])
+# l = v.process_output()
 
-insert_episode(l)
+insert_episodes(l)
 
