@@ -6,8 +6,6 @@ from sqlalchemy import Sequence
 from sqlalchemy import Column, Integer, String, Time
 from pprint import pprint
 
-__author__ = 'maayan'
-
 Base = declarative_base()
 
 
@@ -197,33 +195,31 @@ class Feature(Base):
     MAX_ENERGY_NEXT_WIN = Column(String)
     MEAN_STYLFIT_F0_WIN = Column(String)
 
-    @staticmethod
-    def selectall():
-        for feature in session.query(Feature).all():
-            pprint(vars(feature))
 
-    @staticmethod
-    def add(start_time, end_time, episode_id, feature_id, **kwargs):
-        engine = create_engine('mysql+pymysql://root:admin@127.0.0.1:3306/VOICE', echo=True)
-        Session = sessionmaker(bind=engine)
-        Session.configure(bind=engine)
-        session = Session()
+class Session(object):
+
+    def __init__(self):
+        self.engine = create_engine('mysql+pymysql://root:admin@127.0.0.1:3306/VOICE', echo=True)
+        session = sessionmaker(bind=self.engine)
+        session.configure(bind=self.engine)
+        self.session = session()
+
+    def add(self, start_time, end_time, episode_id, feature_id, commit=False, **kwargs):
         f = Feature(start_time=start_time, end_time=end_time, episode_id=episode_id, feature_id=feature_id,
                     created_at=datetime.datetime.now(), **kwargs)
-        session.add(f)
-        session.commit()
+        self.session.add(f)
+        if commit:
+            self.commit()
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+pymysql://root:admin@127.0.0.1:3306/VOICE', echo=True)
-    Session = sessionmaker(bind=engine)
-    Session.configure(bind=engine)
-    session = Session()
-    # initialize db
+    def delete(self, commit=False, **kwargs):
+        f = Feature(created_at=datetime.datetime.now(), **kwargs)
+        self.session.delete(f)
+        if commit:
+            self.commit()
 
-    # #select
-    # for label in session.query(Label).all():
-    #     pprint (vars(label))
-    # l=Label(id=3,start_time='05:55:55',end_time='05:55:59',label_id=1,play_id=1,actor_id=1,created_at='2015-12-08 15:41:04',
-    #         created_by='om',comments='add from python')
-    # session.add(l)
-    # session.commit()
+    def commit(self):
+        self.session.commit()
+
+    def select_all(self):
+        for feature in self.session.query(InnerFeature).all():
+            pprint(vars(feature))

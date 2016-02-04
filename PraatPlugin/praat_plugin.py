@@ -5,7 +5,7 @@ PARAM_FILES_REL_PATH = 'demo/work_dir/param_files'
 PF_FILES_REL_PATH = 'demo/work_dir/pf_files'
 STATS_FILES = 'demo/work_dir/stats_files'
 
-NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD', 'SLOPE']
+NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD']
 
 
 class PraatPlugin(object):
