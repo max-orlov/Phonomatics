@@ -212,6 +212,13 @@ class Session(object):
             self.commit()
 
     def delete(self, commit=False, **kwargs):
+        """
+        This wasn't checked.
+
+        :param commit: whether been checked.
+        :param kwargs: kwargs for the feature.
+        :return:
+        """
         f = Feature(created_at=datetime.datetime.now(), **kwargs)
         self.session.delete(f)
         if commit:
@@ -221,5 +228,5 @@ class Session(object):
         self.session.commit()
 
     def select_all(self):
-        for feature in self.session.query(InnerFeature).all():
+        for feature in self.session.query(Feature).all():
             pprint(vars(feature))

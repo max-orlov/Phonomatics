@@ -45,8 +45,8 @@ class PraatPlugin(object):
                         attributes = values
                     else:
                         d[output_file][values[0]] = \
-                            {attributes[i].replace('$', ''): values[i] for i in range(1, len(values))
-                             if not clean_word_and_phones or
+                            {attributes[i].replace('$', ''): values[i].replace('?', str(0))
+                             for i in range(1, len(values)) if not clean_word_and_phones or
                              not any(filter(lambda att: att in attributes[i], non_required_keys or NON_REQUIRED_KEYS))}
             attributes = None
 
