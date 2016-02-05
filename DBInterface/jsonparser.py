@@ -13,7 +13,9 @@ def insert_episodes(data):
         session = Session()
         for i in range(1, len(segments)):
             currdata = segments[str(i)]
-            start = datetime.timedelta(seconds=0.5*(i-1))
-            end = start + datetime.timedelta(seconds=0.5*i)
+            s_s, s_ms = (i-1) / 2, ((i-1) % 2) * 50
+            e_s, e_ms = i / 2, (i % 2) * 50
+            start = datetime.timedelta(minutes=s_s, seconds=s_ms)
+            end = datetime.timedelta(minutes=e_s, seconds=e_ms)
             session.add(start, end, int(episode[:episode.index('-')]), i-1, **currdata)
         session.commit()
