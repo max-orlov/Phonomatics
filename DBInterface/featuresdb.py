@@ -1,10 +1,13 @@
+import os
 import datetime
+import yaml
+from pprint import pprint
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Sequence
 from sqlalchemy import Column, Integer, String, Time
-from pprint import pprint
 
 Base = declarative_base()
 
@@ -197,15 +200,29 @@ class Feature(Base):
 
 
 class Session(object):
-
+    """
+    A session object which enables negotiation with the db.
+    """
     def __init__(self):
         self.engine = create_engine('mysql+pymysql://root:admin@127.0.0.1:3306/VOICE', echo=True)
         session = sessionmaker(bind=self.engine)
         session.configure(bind=self.engine)
         self.session = session()
 
-    def add(self, start_time, end_time, episode_id, feature_id, commit=False, **kwargs):
-        f = Feature(start_time=start_time, end_time=end_time, episode_id=episode_id, feature_id=feature_id,
+    def add(self, start_time, end_time, episode_id, feature_id, commit=False,
+            **kwargs):
+        """
+        Adds an episode into the features db.
+        :param start_time: the start time of the feature.
+        :param end_time: the end time of the feature.
+        :param episode_id:
+        :param feature_id:
+        :param commit: should commit right after the add.
+        :param kwargs: any feature attribute as specified in the feature class.
+        :return: None
+        """
+        f = Feature(start_time=start_time, end_time=end_time,
+                    episode_id=episode_id, feature_id=feature_id,
                     created_at=datetime.datetime.now(), **kwargs)
         self.session.add(f)
         if commit:
@@ -225,8 +242,38 @@ class Session(object):
             self.commit()
 
     def commit(self):
+        """
+        Commits the changes onto the db.
+        :return:
+        """
         self.session.commit()
 
-    def select_all(self):
+    def print_all(self):
+        """
+        Prints out all of the records from the db.
+        :return:
+        """
         for feature in self.session.query(Feature).all():
             pprint(vars(feature))
+
+
+def insert_episodes_into_db(data):
+    """
+    Inserts the data (in a file or dict) into the db.
+    :param data: a file or a dictionary to insert into the db.
+    :return: None
+    """
+    if isinstance(data, basestring) and os.path.isfile(data):
+        with open(data) as data_file:
+            data = yaml.load(data_file)
+
+    for episode, segments in data.iteritems():
+        session = Session()
+        for i in range(1, len(segments)):
+            currdata = segments[str(i)]
+            s_s, s_ms = (i-1) / 2, ((i-1) % 2) * 50
+            e_s, e_ms = i / 2, (i % 2) * 50
+            start = datetime.timedelta(minutes=s_s, seconds=s_ms)
+            end = datetime.timedelta(minutes=e_s, seconds=e_ms)
+            session.add(start, end, int(episode[:episode.index('-')]), i-1, **currdata)
+        session.commit()

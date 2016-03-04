@@ -1,3 +1,2 @@
 from labelsdb import Label
-from jsonparser import insert_episodes
-from featuresdb import Session
+from featuresdb import Session, insert_episodes_into_db

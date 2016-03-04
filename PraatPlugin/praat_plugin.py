@@ -9,17 +9,22 @@ NON_REQUIRED_KEYS = ['PHONE', 'VOWEL', 'RHYME', 'WORD']
 
 
 class PraatPlugin(object):
-
+    """
+    A plugin for working directly with praat.
+    """
     def __init__(self, praat_path, praat_prosody_path):
         self.praat_path = praat_path
         dirs_to_create = [path.join(praat_prosody_path, working_dirs_path)
-                          for working_dirs_path in [PARAM_FILES_REL_PATH, PF_FILES_REL_PATH, STATS_FILES]]
+                          for working_dirs_path in [PARAM_FILES_REL_PATH,
+                                                    PF_FILES_REL_PATH,
+                                                    STATS_FILES]]
         for dir in dirs_to_create:
             if not path.isdir(dir):
                 makedirs(dir)
 
     def execute_script(self, script, *args):
         """
+        Executes any script given using Praat.
         If you use some path in the args (or script) please use absolute path.
 
         :param script: absolute path of the script to run.
@@ -29,11 +34,23 @@ class PraatPlugin(object):
         cmd = ['Praat.exe', '--run', script]
         cmd.extend([str(i) for i in args])
         cmd = ' '.join(cmd)
-        out = subprocess.check_output(cmd, env={'PATH': path.dirname(self.praat_path)})
+        out = subprocess.check_output(cmd,
+                                      env={'PATH':
+                                           path.dirname(self.praat_path)})
         return out
 
     @staticmethod
-    def process_output(work_dir, clean_word_and_phones=False, non_required_keys=None):
+    def process_output(work_dir, clean_word_and_phones=False,
+                       non_required_keys=None):
+        """
+        Processes the output from Praat into a dictionary structure.
+        :param work_dir: the workdir of praat.
+        :param clean_word_and_phones: should words and phones be cleared from
+        the output
+        :param non_required_keys: any keys you would to not appears in the
+        dict.
+        :return: a dictionary representing the praat output.
+        """
         d = {}
         attributes = None
         for output_file in listdir(work_dir):

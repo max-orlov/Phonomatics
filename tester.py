@@ -1,6 +1,6 @@
 import os
 from PraatPlugin import VoiceAnalyzer
-from DBInterface import insert_episodes
+from DBInterface import insert_episodes_into_db
 
 v = VoiceAnalyzer()
 
@@ -14,5 +14,5 @@ v = VoiceAnalyzer()
 l = v.process_output()
 
 # This method inserts the processed dictionary into the db, one episode at a time.
-insert_episodes(l)
+insert_episodes_into_db(l)
 
